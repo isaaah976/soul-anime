@@ -1,2 +1,2 @@
-# soul-anime
-Meu projeto é sobre um aplicativo de anime de vários gêneros 
+# K-Scene
+Um aplicativo que conta novidades do Kpop todos os dias
