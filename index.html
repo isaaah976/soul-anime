@@ -3,39 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <title>SOUL ANIME</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;500;700&display=swap');
-
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #fff0f6;
-            background-image: url("https://i.pinimg.com/736x/06/7d/f0/067df0eb0f2d9d5409d28d62b1deca19.jpg"); 
-            background-size: cover;
-            background-attachment: fixed;
+        /* Reset básico */
+        * {
             margin: 0;
             padding: 0;
-            color: #333;
-        
-            <section style="text-align:center; margin:30px 0;">
-    <h2 style="color:#ff3399; font-size:26px; text-shadow:1px 1px 2px #ffd9ec;">🌸 Galeria de Gifs 🌸</h2>
-    <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
-        <img src="https://media.giphy.com/media/l0MYC0LajbaPoEADu/giphy.gif" 
-             alt="Anime 1" 
-             style="width:200px; border-radius:15px; box-shadow:0px 5px 15px rgba(255,105,180,0.5);">
-        <img src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif" 
-             alt="Anime 2" 
-             style="width:200px; border-radius:15px; box-shadow:0px 5px 15px rgba(255,105,180,0.5);">
-        <img src="https://media.giphy.com/media/l0MYC0r9ZC3d2/giphy.gif" 
-             alt="Anime 3" 
-             style="width:200px; border-radius:15px; box-shadow:0px 5px 15px rgba(255,105,180,0.5);">
-    </div>
-</section>
+            box-sizing: border-box;
         }
 
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #ffe6f2; /* rosa clarinho */
+            background-attachment: fixed;
+            color: #333;
+        }
+
+        /* Cabeçalho */
         header {
-            background-color: rgba(255, 192, 203, 0.9);
+            background-color: rgba(255, 182, 193, 0.9);
             text-align: center;
-            padding: 40px;
+            padding: 40px 20px;
             border-bottom: 5px solid #ff99cc;
         }
 
@@ -43,19 +31,28 @@
             font-family: 'Pacifico', cursive;
             font-size: 60px;
             color: #ff3399;
-            text-shadow: 2px 2px 4px white;
+            text-shadow: 2px 2px 5px #ffd9ec;
         }
 
+        header p {
+            font-size: 20px;
+            color: #fff;
+            margin-top: 10px;
+        }
+
+        /* Menu */
         nav {
             background-color: #ffb6c1;
-            text-align: center;
+            display: flex;
+            justify-content: center;
             padding: 15px;
+            gap: 20px;
+            border-bottom: 3px solid #ff99cc;
         }
 
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 20px;
             font-weight: bold;
             font-size: 18px;
             transition: 0.3s;
@@ -65,102 +62,134 @@
             color: #ff3399;
         }
 
+        /* Seções */
         section {
             background-color: rgba(255, 255, 255, 0.9);
             margin: 30px auto;
             padding: 30px;
-            border-radius: 20px;
+            border-radius: 25px;
             width: 80%;
-            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.3);
+            box-shadow: 0px 8px 20px rgba(255, 105, 180, 0.3);
         }
 
-        h2 {
+        section h2 {
+            font-family: 'Pacifico', cursive;
+            font-size: 40px;
             color: #ff3399;
-            font-size: 26px;
-            text-shadow: 1px 1px 2px #ffd9ec;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px #ffd9ec;
         }
 
-        p {
+        section p {
             font-size: 18px;
-            line-height: 1.6;
+            line-height: 1.7;
         }
 
-        iframe {
-            display: block;
-            margin: 0 auto;
-            border-radius: 15px;
-            border: 5px solid #ff99cc;
-            box-shadow: 0px 5px 15px rgba(255, 105, 180, 0.5);
+        /* Quadros grandes */
+        .quadro {
+            background-color: #fff0f5;
+            border: 3px dashed #ff99cc;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
+            transition: 0.3s;
         }
 
+        .quadro:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
+        }
+
+        /* Vídeo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 20px;
+            margin-top: 20px;
+            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+        }
+
+        /* Rodapé */
         footer {
             text-align: center;
             padding: 20px;
             background-color: #ffb6c1;
             color: white;
+            font-weight: bold;
             border-top: 5px solid #ff99cc;
+            margin-top: 30px;
         }
+
+        /* Responsivo */
+        @media(max-width: 768px){
+            section, .quadro {
+                width: 90%;
+            }
+
+            header h1 {
+                font-size: 45px;
+            }
+        }
+
     </style>
 </head>
 <body>
     <header>
-        <h1>🌸 SOUL ANIME 🌸</h1>
-        <p>Um cantinho para falar sobre animes</p>
+        <h1>SOUL ANIME</h1>
+        <p>Um site kawaii sobre o mundo dos animes</p>
     </header>
 
     <nav>
-        <a href="#sobre">Sobre Animes</a>
+        <a href="#intro">Introdução</a>
         <a href="#historia">História</a>
-        <a href="#curiosidades">Curiosidades</a>
+        <a href="#tipos">Tipos de Anime</a>
         <a href="#video">Vídeo</a>
     </nav>
 
-    <section id="sobre">
-        <h2>🌸 O que são Animes?</h2>
-        <p>Anime é a palavra usada para se referir a animações japonesas. 
-           Eles possuem estilos de arte únicos, personagens cativantes e histórias que podem variar desde aventuras mágicas até terror, como 
-           "Komi Ni Todoke", um anime leve e "Junji Ito", um anime de terror.
-           O anime conquistou o mundo com seu charme único e diverso, chamando atenção de bastante gente.</p>
+    <section id="intro">
+        <div class="quadro">
+            <h2>O que são Animes?</h2>
+            <p>Animes são animações originárias do Japão, reconhecidos mundialmente por seus estilos artísticos únicos, histórias envolventes e personagens cativantes. Eles podem variar de aventuras épicas a histórias fofinhas e românticas.</p>
+        </div>
     </section>
 
     <section id="historia">
-        <h2>🌸 História dos Animes</h2>
-        <p>O anime, como conhecemos hoje, é uma forma de animação japonesa que conquistou o mundo 
-            inteiro.
-             A palavra “anime” no Japão originalmente se refere a qualquer tipo de animação, mas fora do país, passou a ser usada exclusivamente para as animações produzidas no Japão.
-            A história dos animes começou no início do século XX, quando os primeiros filmes animados japoneses surgiram. Um dos primeiros registros é o curta-metragem “Namakura Gatana” (A Espada Sem Corte), produzido em 1917. Era um filme de apenas alguns minutos, mas representou o início da indústria de animação no Japão.
-            Durante as décadas de 1920 e 1930, os estúdios japoneses começaram a experimentar técnicas de animação influenciadas pelos filmes ocidentais, especialmente os da Disney. Os animadores japoneses perceberam que poderiam contar histórias de forma criativa, utilizando técnicas próprias, como os famosos olhos grandes e expressivos, que se tornariam uma marca registrada do estilo anime.
-            Na década de 1960, o anime começou a se consolidar com o surgimento de séries para televisão. Um dos nomes mais importantes dessa época foi Osamu Tezuka, conhecido como o “Deus do Manga”. Ele criou obras icônicas como Astro Boy, que estabeleceu muitas das convenções do anime moderno, incluindo o ritmo acelerado da narrativa, a construção de personagens cativantes
-            e a mistura de aventura, drama e humor.
-            A partir dos anos 70 e 80, os animes começaram a se diversificar em gêneros e estilos. 
-            Surgiram desde aventuras épicas como Mobile Suit Gundam e Dragon Ball, até romances e histórias fofinhas, como Candy Candy e Sailor Moon.
-            Nessa época, o anime deixou de ser apenas para crianças e passou a conquistar adolescentes e adultos, explorando temas mais complexos e emocionais.
-            Nos anos 90, a indústria de anime explodiu internacionalmente. 
-            Séries como Pokémon, Dragon Ball Z, Sailor Moon e Neon Genesis Evangelion fizeram sucesso em diversos países, incluindo o Brasil, Estados Unidos e países europeus. Esse período consolidou o anime como um fenômeno cultural global, influenciando moda, música e até a forma como os quadrinhos japoneses (mangás) eram consumidos no mundo.Hoje, os animes cobrem todos os gêneros possíveis: ação, comédia, romance, terror, fantasia, esportes, slice of life, shoujo, shounen, seinen e muitos outros.
-            O estilo kawaii, fofinho e colorido, também ganhou seu espaço, com personagens adoráveis que conquistam públicos de todas as idades. Além disso, muitos animes são baseados em mangás, light novels, jogos ou até ideias originais, e novos títulos continuam surgindo todos os anos, mantendo a indústria viva e em constante inovação.
-            O anime, portanto, não é apenas entretenimento; é uma expressão cultural rica, que combina arte, narrativa e emoção. Ele reflete a sociedade japonesa, suas tradições, inovações tecnológicas e visões de mundo, e ao mesmo tempo conecta pessoas de diferentes países através de histórias incríveis.</p>
+        <div class="quadro">
+            <h2>História dos Animes</h2>
+            <p>O anime começou no início do século XX, ganhando força com obras de Osamu Tezuka. Desde então, evoluiu para diferentes estilos e gêneros, conquistando fãs de todas as idades ao redor do mundo. Hoje, animes fazem parte da cultura pop global.</p>
+        </div>
     </section>
 
-    <section id="curiosidades">
-        <h2>🌸
-             Curiosidades sobre Animes</h2>
-        <p>1. O anime mais longo já criado é Sazae-san, com mais de 7mil episódios.<br>
-           2. Muitos animes são baseados em mangás (quadrinhos japoneses).<br>
-           3. Animes kawaii são super populares, trazendo cores fofas, personagens doces e muitas histórias de amizade e amor.<br>
-           4. O primeiro anime oficial do Japão foi Nakamura Gatana, lançado em 1917.<br>
-           5. O estilo dos olhos grandes dos personagens foi inspirados nos desenhos da Disney no século XX.<br>
-           6. O gênero Kawaii nos animes ficou super popular com obras como Sailor Moon, Cardcaptor Sakura e Hello Kitty, virando ícones na cultura japonesa. <br></p>
+    <section id="tipos">
+        <div class="quadro">
+            <h2>Tipos de Anime</h2>
+            <p>Existem vários tipos de animes, como shounen (aventura e ação para jovens), shoujo (romance para garotas), seinen (histórias mais maduras) e slice of life (cotidiano). Cada tipo traz experiências diferentes e personagens memoráveis.</p>
+        </div>
     </section>
 
     <section id="video">
-        <h2>🌸 Vídeo Explicativo sobre Animes</h2>
-        <iframe width="560" height="315" src="https://youtu.be/lWhy4zlGl7s?si=U9gsPCBYW5hUKd9t" 
-        title="Vídeo explicando sobre Animes" frameborder="0" 
-        allowfullscreen></iframe>
+        <div class="quadro">
+            <h2>Vídeo Explicativo</h2>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vídeo sobre Animes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
     </section>
 
     <footer>
-        <p>Feito com carinho 🌸 | SOUL ANIME</p>
+        🌸 Criado por [Seu Nome] - Tema: Animes Kawaii 🌸
     </footer>
 </body>
 </html>
