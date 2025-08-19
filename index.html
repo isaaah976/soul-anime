@@ -1,285 +1,108 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SOUL ANIME</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
-    <style>
-        /* Reset básico */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Comic Neue', cursive;
-            background-color: #ffe6f2; /* rosa clarinho */
-            background-attachment: fixed;
-            color: #333;
-        }
-
-        /* Cabeçalho */
-        header {
-            background-color: rgba(255, 182, 193, 0.9);
-            text-align: center;
-            padding: 40px 20px;
-            border-bottom: 5px solid #ff99cc;
-        }
-
-        header h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 60px;
-            color: #ff3399;
-            text-shadow: 2px 2px 5px #ffd9ec;
-        }
-
-        header p {
-            font-size: 20px;
-            color: #fff;
-            margin-top: 10px;
-        }
-
-        /* Menu */
-        nav {
-            background-color: #ffb6c1;
-            display: flex;
-            justify-content: center;
-            padding: 15px;
-            gap: 20px;
-            border-bottom: 3px solid #ff99cc;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 18px;
-            transition: 0.3s;
-        }
-
-        nav a:hover {
-            color: #ff3399;
-        }
-
-        /* Seções */
-        section {
-            background-color: rgba(255, 255, 255, 0.9);
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 25px;
-            width: 80%;
-            box-shadow: 0px 8px 20px rgba(255, 105, 180, 0.3);
-        }
-
-        section h2 {
-            font-family: 'Pacifico', cursive;
-            font-size: 40px;
-            color: #ff3399;
-            margin-bottom: 20px;
-            text-shadow: 1px 1px 3px #ffd9ec;
-        }
-
-        section p {
-            font-size: 18px;
-            line-height: 1.7;
-        }
-
-        /* Quadros grandes */
-        .quadro {
-            background-color: #fff0f5;
-            border: 3px dashed #ff99cc;
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 20px;
-            box-shadow: 0 5px 15px rgba(255, 105, 180, 0.2);
-            transition: 0.3s;
-        }
-
-        .quadro:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.3);
-        }
-
-        /* Vídeo */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 20px;
-            margin-top: 20px;
-            box-shadow: 0 8px 20px rgba(255, 105, 180, 0.3);
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top:0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-        }
-
-        /* Rodapé */
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #ffb6c1;
-            color: white;
-            font-weight: bold;
-            border-top: 5px solid #ff99cc;
-            margin-top: 30px;
-        }
-
-        /* Responsivo */
-        @media(max-width: 768px){
-            section, .quadro {
-                width: 90%;
-            }
-
-            header h1 {
-                font-size: 45px;
-            }
-        }
-
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <h1>SOUL ANIME</h1>
-        <p>Um site kawaii sobre o mundo dos animes</p>
     </header>
 
-    <nav>
-        <a href="#intro">Introdução</a>
-        <a href="#historia">História</a>
-        <a href="#tipos">Tipos de Anime</a>
-        <a href="#video">Vídeo</a>
-    </nav>
+    <main>
+        <section class="welcome">
+            <img src="img/anime1.png" alt="Anime personagem fofo" class="avatar">
+            <p>Bem-vindo ao meu site! Aqui você vai encontrar tudo sobre animes, falar sobre seus favoritos e se divertir!</p>
+        </section>
 
-    <section id="intro">
-        <div class="quadro">
-            <h2>O que são Animes?</h2>
-            <p>Animes são animações originárias do Japão, reconhecidos mundialmente por seus estilos artísticos únicos, histórias envolventes e personagens cativantes. Eles podem variar de aventuras épicas a terror e assassinato, como 
-            "Junji Ito".</p>
-        </div>
-    </section>
+        <section class="update-log">
+            <h2>Update Log</h2>
+            <p><strong>09.12.24</strong> - Primeiro post do site! Aqui você vai acompanhar todas as atualizações.</p>
+        </section>
 
-    <section id="historia">
-        <div class="quadro">
-            <h2>História dos Animes</h2>
-            <p>O anime, como conhecemos hoje, é uma forma de animação japonesa que conquistou o mundo inteiro. A palavra “anime” no Japão originalmente se refere a qualquer tipo de animação, mas fora do país, passou a ser usada exclusivamente para as animações produzidas no Japão.
-                A história dos animes começou no início do século XX, quando os primeiros filmes animados japoneses surgiram. Um dos primeiros registros é o curta-metragem “Namakura Gatana” (A Espada Sem Corte), produzido em 1917. Era um filme de apenas alguns minutos, mas representou o início da indústria de animação no Japão.
-                Durante as décadas de 1920 e 1930, os estúdios japoneses começaram a experimentar técnicas de animação influenciadas pelos filmes ocidentais, especialmente os da Disney. Os animadores japoneses perceberam que poderiam contar histórias de forma criativa, utilizando técnicas próprias, como os famosos olhos grandes e expressivos, que se tornariam uma marca registrada do estilo anime.
-                Na década de 1960, o anime começou a se consolidar com o surgimento de séries para televisão. Um dos nomes mais importantes dessa época foi Osamu Tezuka, conhecido como o “Deus do Manga”. Ele criou obras icônicas como Astro Boy, que estabeleceu muitas das convenções do anime moderno, incluindo o ritmo acelerado da narrativa, a construção de personagens cativantes e a mistura de aventura, drama e humor.
-                A partir dos anos 70 e 80, os animes começaram a se diversificar em gêneros e estilos. Surgiram desde aventuras épicas como Mobile Suit Gundam e Dragon Ball, até romances e histórias fofinhas, como Candy Candy e Sailor Moon. Nessa época, o anime deixou de ser apenas para crianças e passou a conquistar adolescentes e adultos, explorando temas mais complexos e emocionais.
-                Nos anos 90, a indústria de anime explodiu internacionalmente. Séries como Pokémon, Dragon Ball Z, Sailor Moon e Neon Genesis Evangelion fizeram sucesso em diversos países, incluindo o Brasil, Estados Unidos e países europeus. Esse período consolidou o anime como um fenômeno cultural global, influenciando moda, música e até a forma como os quadrinhos japoneses (mangás) eram consumidos no mundo.Hoje, os animes cobrem todos os gêneros possíveis: ação, comédia, romance, terror, fantasia, esportes, slice of life, shoujo, shounen, seinen e muitos outros. O estilo kawaii, fofinho e colorido, também ganhou seu espaço, com personagens adoráveis que conquistam públicos de todas as idades. Além disso, muitos animes são baseados em mangás, light novels, jogos ou até ideias originais, e novos títulos continuam surgindo todos os anos, mantendo a indústria viva e em constante inovação.O anime, portanto, não é apenas entretenimento; é uma expressão cultural rica, que combina arte, narrativa e emoção. 
-                Ele reflete a sociedade japonesa, suas tradições, inovações tecnológicas e visões de mundo, e ao mesmo tempo conecta pessoas de diferentes países através de histórias incríveis, personagens inesquecíveis e visuais encantadores.</p>
-        </div>
-    </section>
+        <section class="about">
+            <h2>Sobre mim</h2>
+            <p>Oi, eu sou um amante de animes! Este site é dedicado a mostrar o meu amor por animes fofos, clássicos e modernos.</p>
+        </section>
 
-    <section id="tipos">
-        <div class="quadro">
-            <h2>Tipos de Anime</h2>
-            <p>1. Shounen
-Shounen é um tipo de anime feito principalmente para meninos jovens, geralmente entre 12 e 18 anos.
- Ele foca em ação, aventura e superação. Os protagonistas costumam enfrentar desafios enormes, treinar duro e crescer ao longo da história. 
- Além disso, shounen valoriza a amizade e a coragem. Exemplos famosos incluem Naruto, Dragon Ball e My Hero Academia.
+        <section class="video">
+            <h2>Vídeo em destaque</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7P7Q2Xo6g5A" title="Jujutsu Kaisen Opening" frameborder="0" allowfullscreen></iframe>
+        </section>
 
-
-2. Shoujo
-Shoujo é voltado para meninas jovens, também entre 12 e 18 anos.
- Esses animes focam em romance, emoções e relações interpessoais, muitas vezes misturando drama e comédia.
-  Os personagens principais geralmente enfrentam desafios emocionais e aprendem lições sobre amizade e amor. Exemplos: Sailor Moon, Cardcaptor Sakura, Fruits Basket.
-
-
-3. Seinen
-Seinen é destinado a homens adultos, com histórias mais complexas, maduras e muitas vezes violentas ou psicológicas. Os temas incluem política, conspirações, batalhas intensas e dilemas éticos.
- É mais realista e profundo do que shounen. Exemplos: Tokyo Ghoul, Berserk, Attack on Titan.
-
-
-4. Josei
-Josei é voltado para mulheres adultas e aborda romance, drama e questões do dia a dia de forma madura.
- Diferente do shoujo, mostra relacionamentos e emoções mais realistas, refletindo experiências adultas. 
- Exemplos: Nana, Honey and Clover, Paradise Kiss.
-
-
-5. Kodomo
-Kodomo é feito para crianças pequenas e possui histórias simples, educativas e divertidas.
- Os personagens geralmente vivem aventuras leves e ensinam valores como amizade, honestidade e cooperação.
-  Exemplos: Doraemon, Anpanman, Pokemon (inicial).
-
-
-6. Mecha
-Mecha é um gênero de anime focado em robôs gigantes, tecnologia e batalhas futuristas. 
-Os protagonistas pilotam máquinas sofisticadas em guerras ou aventuras épicas. 
-Pode se misturar com shounen ou seinen, dependendo da história. Exemplos: Gundam, Evangelion, Code Geass.
-
-
-7. Slice of Life
-Slice of Life retrata o cotidiano e situações realistas, mostrando a vida escolar, família ou amizades. 
-É mais tranquilo e fofo, com foco nas relações entre personagens e pequenas aventuras do dia a dia.
- Exemplos: K-On!, Clannad, Barakamon.
-
-
-8. Isekai
-Isekai significa “outro mundo”. O protagonista geralmente é transportado ou reencarnado em um universo diferente, muitas vezes mágico ou cheio de aventuras.
- É um dos gêneros mais populares atualmente. Exemplos: Re:Zero, Sword Art Online, That Time I Got Reincarnated as a Slime.
-
-
-9. Harem / Reverse Harem
-Harem mostra um garoto rodeado de várias garotas, geralmente com romance e comédia.
- Reverse Harem mostra uma garota cercada de vários garotos. Ambos os tipos exploram relações amorosas e situações engraçadas ou românticas.
-  Exemplos: High School DxD (harem), Ouran High School Host Club (reverse harem).
-
-
-10. Comedy / Comédia
-Esse tipo de anime tem o objetivo de fazer rir, com piadas, situações absurdas e paródias. 
-Pode se misturar com outros gêneros como ação ou romance. Exemplos: Gintama, Konosuba, Nichijou.
-
-
-11. Fantasy / Aventura
-Animes de fantasia e aventura mostram mundos mágicos, monstros e heróis em jornadas épicas.
- O foco é na exploração, batalhas e crescimento dos personagens. Exemplos: Fairy Tail, One Piece, Magi.
-
-
-12. Horror / Terror
-Animes de horror exploram o medo, o sobrenatural e o suspense.
- Eles podem ter monstros, espíritos ou situações psicológicas assustadoras.
-  Exemplos: Another, Higurashi no Naku Koro ni, Tokyo Ghoul.
-
-
-13. Romance
-O gênero romance foca em relações amorosas e dramas sentimentais.
- Pode ser misturado com shoujo, josei ou slice of life, mostrando como os personagens enfrentam obstáculos emocionais e aprendem com eles.
-  Exemplos: Toradora, Your Lie in April, Kimi ni Todoke.
-
-
-14. Sports / Esportes
-Animes de esportes mostram competições, treinamento e superação.
- Os protagonistas aprendem a trabalhar em equipe, enfrentar derrotas e lutar pelo sucesso.
-  Exemplos: Haikyuu, Kuroko no Basket, Yuri on Ice.
-
-
-15. Supernatural / Sobrenatural
-Animes sobrenaturais exploram poderes, espíritos, magia ou fenômenos misteriosos.
- Os personagens muitas vezes possuem habilidades especiais e enfrentam desafios fantásticos ou místicos. 
- Exemplos: Bleach, Noragami, Natsume Yuujinchou.</p>
-        </div>
-    </section>
-
-    <section id="video">
-        <div class="quadro">
-            <h2>Anime</h2>
-            <div class="video-container">
-                <iframe src="https://youtu.be/5yb2N3pnztU?si=" title="Animes" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-        </div>
-    </section>
+        <section class="to-do">
+            <h2>Lista de tarefas</h2>
+            <ul>
+                <li>Adicionar mais personagens</li>
+                <li>Postar reviews de animes</li>
+                <li>Atualizar seção de vídeos</li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        🌸 Criado por Isabelly - Kawaii 🌸
+        <p>&copy; 2025 SOUL ANIME. Todos os direitos reservados.</p>
     </footer>
 </body>
 </html>
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #fff0f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffb6c1;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3em;
+    color: #fff;
+    text-shadow: 2px 2px #ff69b4;
+}
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+section {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+section h2 {
+    color: #ff69b4;
+    font-family: 'Pacifico', cursive;
+}
+
+.avatar {
+    width: 100%;
+    border-radius: 15px;
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+footer {
+    background-color: #ffb6c1;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
